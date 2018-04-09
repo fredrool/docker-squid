@@ -2,9 +2,9 @@
 export PROJECT_NAME ?= squid
 ORG_NAME ?= dockerproductionaws
 REPO_NAME ?= squid
-DOCKER_REGISTRY ?= xxxxxxxxxxxx.dkr.ecr.us-west-2.amazonaws.com
-AWS_ACCOUNT_ID ?= xxxxxxxxxxxx
-DOCKER_LOGIN_EXPRESSION ?= $$(aws ecr get-login --registry-ids $(AWS_ACCOUNT_ID) --no-include-email)
+DOCKER_REGISTRY ?= 305261792510.dkr.ecr.us-east-2.amazonaws.com
+AWS_ACCOUNT_ID ?= 305261792510
+DOCKER_LOGIN_EXPRESSION ?= $$(aws ecr get-login --region us-east-2 --registry-ids $(AWS_ACCOUNT_ID) --no-include-email)
 
 # Release settings
 export SQUID_WHITELIST ?= 
