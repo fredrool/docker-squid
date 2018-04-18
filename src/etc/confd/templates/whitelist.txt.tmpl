@@ -1,4 +1,4 @@
-{{- range $region := split (getv "/aws/regions" "us-west-2") "," -}}
+{{- range $region := split (getv "/aws/regions" "us-east-2") "," -}}
 .{{$region}}.amazonaws.com
 .s3-{{$region}}.amazonaws.com
 {{ end -}}
@@ -6,11 +6,13 @@
 iam.amazonaws.com
 sts.amazonaws.com
 support.us-east-1.amazonaws.com
+support.us-east-2.amazonaws.com
 waf.amazonaws.com
 cloudfront.amazonaws.com
 route53.amazonaws.com
 route53domains.us-east-1.amazonaws.com
-devicefarm.us-west-2.amazonaws.com
+route53domains.us-east-2.amazonaws.com
+devicefarm.us-east-2.amazonaws.com
 importexport.amazonaws.com
 {{ with $whitelist := (getv "/squid/whitelist" "%") -}}
 {{ if and (ne $whitelist "%") (ne $whitelist "") -}}
